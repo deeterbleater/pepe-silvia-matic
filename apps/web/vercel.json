@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && npm run build --workspace @synaptic-lattice/web",
+  "installCommand": "cd ../.. && npm install",
+  "outputDirectory": ".next"
+}

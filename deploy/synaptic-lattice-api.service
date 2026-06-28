@@ -1,0 +1,16 @@
+[Unit]
+Description=Synaptic Lattice API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/synaptic-lattice
+EnvironmentFile=/etc/synaptic-lattice/api.env
+ExecStart=/usr/bin/npm run start --workspace @synaptic-lattice/api
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target

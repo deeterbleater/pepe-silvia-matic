@@ -1,0 +1,22 @@
+{
+  "name": "synaptic-lattice",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @synaptic-lattice/api",
+    "dev:api": "npm run dev --workspace @synaptic-lattice/api",
+    "dev:web": "npm run dev --workspace @synaptic-lattice/web",
+    "build": "npm run build --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "lint": "npm run lint --workspaces",
+    "vercel:login": "vercel login",
+    "vercel:link": "vercel link --cwd apps/web",
+    "vercel:env:pull": "vercel env pull apps/web/.env.local --cwd apps/web",
+    "vercel:deploy": "vercel deploy --cwd apps/web",
+    "vercel:prod": "vercel deploy --prod --cwd apps/web",
+    "vercel:inspect": "vercel inspect --cwd apps/web"
+  }
+}

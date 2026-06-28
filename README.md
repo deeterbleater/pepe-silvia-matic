@@ -42,6 +42,8 @@ CLERK_SECRET_KEY=sk_live_or_test_value
 DEV_AUTH_BYPASS=false
 ```
 
+Use a comma-separated `WEB_ORIGIN` value when you want to allow production and preview Vercel domains.
+
 ## Vercel
 
 The root package includes helper scripts:
